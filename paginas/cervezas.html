@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestras cervezas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="../estilos/estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbarLeft">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="#">Nuestras cervezas</a></li>
+                </ul>
+            </div>
+            <a class="logo" href="../index.html"><img src="../imagenes/beerLogo.png"></a>
+            <div class="navbarRight">
+                <ul>
+                    <li><a href="../paginas/sobreNosotros.html">Sobre nosotros</a></li>
+                    <li><a href="../paginas/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="iconos">
+                    <a>
+                        <div class="botonCarrito" id="botonCarrito">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="contadorCarrito">0</span>
+                        </div>
+                    </a>
+            </div>
+        </nav>
+    </header>
+    <section class="seccionProductos">
+        <h2 class="titulo">Nuestras cervezas</h2>
+        <div id="contenedorProductos" class="contenedorProductos">
+            <!-- productos diseñados en js -->
+            
+            <!-- <div class="producto" id="container" id="1">
+                <div class="tituloProducto">
+                    <div class="iconoContainer">
+                        <img class="icono" src="../imagenes/icono.webp">
+                    </div>
+                    <h2 class="nombreProducto">Honey</h2>
+                </div>
+                <div class="imgContenedor">
+                    <img src="../imagenes/lata2.png">
+                </div>
+                <div class="infoProducto">
+                    <div class="especificaciones">
+                        <ul class="ul">
+                            <li class="liIbu">ibu: 20</li>
+                            <li class="liAbv">abv 6%</li>
+                            <li class="liCc">500 cc</li>
+                        </ul>
+                    </div>
+                    <button id="agregar" class="botonAgregar">
+                        <p class="precio">$220</p>
+                        <p class="agregarAlCarrito">AGREGAR AL CARRITO</p>
+                    </button>
+                    <div class="descripcionProducto">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, at recusandae!</p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <div class="modalContenedorCarrito" id="modalContenedorCarrito">
+        <div class="modalCarrito">
+            <h3>CARRITO</h3>
+            <button id="carritoCerrar" class="carritoCerrar"><i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="carritoContenedor" class="carritoContenedor">
+                <!-- modal en JavaScript index -->
+                
+                <!-- <div class="fila">
+                    <div class="imagenCarritoContenedor">
+                        <img class="imagenCarrito" src="../imagenes/cerveza1.png">
+                    </div>
+                    <div class ="infoProductoCarrito">
+                        <p class="nombreProductoCarrito">red honey</p>
+                        <div class="cantidadCarrito">
+                            <p>Cantidad:</p>
+                            <p class="cantidadNumero">
+                                <span id="cantidad">5</span>
+                            </p>
+                        </div>
+                        <div class="precioCarrito">
+                            <p>Precio:</p>
+                            <p ><span>$500</span></p>
+                        </div>
+                    <button id="carritoCerrar">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div> -->
+            </div>
+            <p class="precioTotal">
+                PRECIO TOTAL: 
+                <span id="precioTotal">0</span>
+            </p>
+            <button id="vaciarCarrito" class="vaciarCarrito">Vaciar carrito</button>
+        </div>
+    </div>
+    
+    <footer>
+
+    </footer>
+    <!-- libreria sweet alert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../modal.js"></script>
+    <script src="../index.js"></script>
+</body>
+</html>

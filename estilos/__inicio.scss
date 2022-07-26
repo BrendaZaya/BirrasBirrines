@@ -1,0 +1,66 @@
+
+/* ------------banner--------------*/
+
+.banner {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+
+    .contenedorBanner {
+        height: 100%;
+        padding: 4rem;
+        background-color: $colorPrimario;
+        position: relative;
+        margin-left: auto;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        display: flex;
+
+        div {
+            width: 53%;
+            height: auto;
+
+            .tituloBanner {
+                margin-bottom: 3rem;
+                width: 100%;
+
+                h1 {
+                    font-size: 6rem;
+                    width: 100%;
+                    line-height: 120%;
+                    padding-bottom: 2rem;
+                }
+
+                h2 {
+                    font-family: $fontPrincipal;
+                    font-size: 1.5rem;
+                    font-weight: 100;
+                    width: 100%;
+                }
+            }
+
+            .boton {
+                padding: 16px 70px;
+                background-color: $colorcta;
+                color: $colorBlanco;
+                cursor: pointer;
+                border-radius: 10px;
+                font-size: 22px;
+                text-decoration: inherit;
+            }
+        }
+        
+        img {
+            height: auto;
+            width: 40vw;
+            display: block;
+            // z-index: 20;
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            bottom: -8rem;
+            max-width: 100%;
+        }
+    }
+}
+

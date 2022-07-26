@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../estilos/estilos.css">
+</head>
+
+<body>
+    <header>
+      <nav class="navbar">
+          <div class="navbarLeft">
+              <ul>
+                  <li><a href="../index.html">Inicio</a></li>
+                  <li><a href="../paginas/cervezas.html">Nuestras cervezas</a></li>
+              </ul>
+          </div>
+          <a class="logo" href="#"><img src="../imagenes/beerLogo.png"></a>
+          <div class="navbarRight">
+              <ul>
+                  <li><a href="../paginas/sobreNosotros.html">Sobre nosotros</a></li>
+                  <li><a href="../paginas/contacto.html">Contacto</a></li>
+              </ul>
+          </div>
+          <div class="iconos">
+                  <a>
+                      <div class="icon">
+                          <i class="fa-solid fa-cart-shopping"></i>
+                      </div>
+                  </a>
+          </div>
+      </nav>
+  </header>
+  <section class="seccionContacto">
+    <h1 class="titulo" id="tituloContacto">Te damos la bienvenida</h1>
+    <p id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <form id="formulario">
+      <fieldset>
+        <label id="nombreLabel">Nombre<input id="nombre" type="text" placeholder="Nombre" required></input></label>
+        <label id="emailLabel">Email<input id="email" type="email" placeholder="Email" required></input></label>
+        <label id="edadLabel">Edad (optional)<input id="edad" type="number" placeholder="Edad" min="18" max="110"></input></label>
+      </fieldset>
+        <label>Dejanos tu comentario
+          <textarea type="text" rows="3" cols="30" placeholder="Comentario"></textarea>
+        </label>
+      <fieldset>
+        <input id="submit" type="submit" value="Submit" />
+      </fieldset>
+    </form>
+  </section>
+    
+
+    <script src="../index.js"></script>
+  </body>
+</html>

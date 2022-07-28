@@ -1,5 +1,5 @@
 
-// traer contenedor
+// traer contenedores
 
 const contenedorProductos = document.getElementById('contenedorProductos');
 
@@ -12,7 +12,27 @@ const contadorCarrito = document.getElementById('contadorCarrito');
 const cantidad = document.getElementById('cantidad')
 const precioTotal = document.getElementById('precioTotal');
 
+const modalContenedor = document.getElementById('modalContenedorCarrito');
+
+const botonCarrito = window.document.querySelector('#botonCarrito');
+
+const cerrarCarrito = window.document.querySelector('#carritoCerrar')
+
 let carrito = []
+
+
+
+// eventos del boton carrito
+
+botonCarrito.addEventListener("click", () => {
+    modalContenedor.classList.add('modalActive');
+});
+
+cerrarCarrito.addEventListener("click", () => {
+    modalContenedor.classList.remove('modalActive');
+});
+
+// traer productos cargados en JSON
 
 fetch("../data.json")
 .then(resp => resp.json())

@@ -5,7 +5,6 @@
     height: auto;
     background-color: $colorSecundario;
     padding: 2vh;
-    margin-top: 5rem;
 
     // .titulo {
     //     text-align: center;
@@ -177,23 +176,27 @@
 
 .modalContenedorCarrito {
     position: fixed;
-    top: 5.1rem;
+    top: 0;
+    left: 0;
+    // left: 140vw;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.3);
+    // padding-right: 2em;
+    // background-color: rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: right;
-    transition: all .5s;
+    transition: all .2s;
     opacity: 0;
     visibility: hidden;
-    z-index: 9;
+    z-index: 999;
+
 
     .modalCarrito {
         width: 38vw;
         height: 100vh;
+        padding-bottom: 8em;
         background-color: $colorBlanco;
         transition: all .5s;
-        padding-bottom: 8rem;
         display: flex;
         position: absolute;
         flex-direction: column;
@@ -201,27 +204,45 @@
         overflow-y: auto;
         overflow-x: hidden;
 
-        h3 {
-            font-size: 20px;
-            font-family: $fontPrincipal;
-            text-align: center;
+        &::-webkit-scrollbar {
+            width: 10px;
         }
 
-        .carritoCerrar {
-            height: 40px;
-            width: 40px;
-            background-color: $colorBlanco;
+        h3 {
+            width: 38vw;
+            height: 5rem;
             font-size: 20px;
+            font-family: $fontPrincipal;
+            padding: 0.5em;
+            margin-top: 1em;
+            // margin-bottom: 0.5em;
+            text-align: center;
+            // border-bottom: solid 1px $colorNegro;
+        }
+    
+        .carritoCerrar {
+            height: 44px;
+            width: 44px;
+            background-color: $colorBlanco;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             border: none;
             position: absolute;
-            top: 0;
-            right: 16px;
+            top: 2em;
+            left: 32vw;
             cursor: pointer;
+
+            i {
+                font-size: 22px;
+                color: $colorNegro;
+            }
         }
 
         .productoEnCarrito {
             height: 140px;
             width: 38vw;
+            padding: 0.5em;
 
             .fila {
                 height: 140px;
@@ -270,6 +291,7 @@
                     }
 
                     .precioCarrito {
+
                         p {
                             font-size: 14px;
                             font-family: $fontPrincipal;
@@ -289,6 +311,7 @@
                 font-size: 16px;
                 border: none;
                 background-color: $colorBlanco;
+                padding: 16px;
                 cursor: pointer;
 
             }
@@ -307,10 +330,19 @@
             justify-items: center;
         }
 
+        .comprar {
+            height: 40px;
+            width: 80%;
+            margin: 32px 16px 22px 16px;
+            font-size: 18px;
+            background-color: $colorPrimario;
+            border: solid 2px $colorPrimario;
+            cursor: pointer;
+        }
+
         .vaciarCarrito {
             height: 40px;
-            width: 260px;
-            margin: 16px;
+            width: 80%;
             font-size: 18px;
             background-color: $colorBlanco;
             border: solid 2px $colorPrimario;
@@ -319,8 +351,11 @@
     }
 }
 
-.modalActive {
+.modalActivo {
     opacity: 1;
     visibility: visible;
-    transition: all .5s;
+    transition: all .2s;
+    background-color: rgba(0, 0, 0, 0.3);
+    // justify-content: right;
+    // left: 0;
 }

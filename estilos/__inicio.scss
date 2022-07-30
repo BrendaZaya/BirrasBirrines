@@ -1,64 +1,63 @@
 
 /* ------------banner--------------*/
-
 .banner {
-    height: 100vh;
+    min-height: 75vh;
     width: 100vw;
-    position: absolute;
+    margin-top: 5em;
 
     .contenedorBanner {
         height: 100%;
-        padding: 4rem;
         background-color: $colorPrimario;
-        position: relative;
-        margin-left: auto;
         padding-left: 3rem;
         padding-right: 3rem;
         display: flex;
+        align-items: center;
 
-        div {
+        .tituloBanner {
             width: 53%;
-            height: auto;
+            max-height: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-around;
 
-            .tituloBanner {
-                margin-bottom: 3rem;
+            h1 {
+                font-size: 6rem;
+                padding: 1em 0 1em 0;
                 width: 100%;
-
-                h1 {
-                    font-size: 6rem;
-                    width: 100%;
-                    line-height: 120%;
-                    padding-bottom: 2rem;
-                }
-
-                h2 {
-                    font-family: $fontPrincipal;
-                    font-size: 1.5rem;
-                    font-weight: 100;
-                    width: 100%;
-                }
+                line-height: 120%;
+                padding-bottom: 2rem;
             }
 
-            .boton {
-                padding: 16px 70px;
-                background-color: $colorcta;
-                color: $colorBlanco;
-                cursor: pointer;
-                border-radius: 10px;
-                font-size: 22px;
+            h2 {
+                font-family: $fontPrincipal;
+                font-size: 1.5rem;
+                font-weight: 100;
+                width: 100%;
+            }
+
+            a {
                 text-decoration: inherit;
+                margin: 16px 0 16px 0;
+
+                .boton {
+                    height: 50px;
+                    width: 300px;
+                    background-color: $colorcta;
+                    color: $colorBlanco;
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 10px;
+                    font-size: 22px;
+                }
             }
         }
         
         img {
             height: auto;
-            width: 40vw;
+            width: 42%;
             display: block;
-            // z-index: 20;
             position: absolute;
-            top: 2rem;
             right: 2rem;
-            bottom: -8rem;
             max-width: 100%;
         }
     }

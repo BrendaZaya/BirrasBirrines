@@ -51,5 +51,10 @@
             min-width: 300px;
             color: $colorBlanco;
         }
+
+        // inputs con errores
+        .errorDeCampo {
+            border: 2px solid rgb(255, 0, 0);
+        }
     }
 }

@@ -7,19 +7,26 @@
   font-family: Nexa, Helvetica, Arial, sans-serif;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
 /* ------------colores--------------*/
 /* ------------tipografías--------------*/
 /* ------------barra de navegación--------------*/
 header {
-  top: 0;
-  left: 0;
-  width: 100%;
+  width: 100vw;
+  height: 5em;
   background-color: #fefefe;
   position: fixed;
+  top: 0;
   z-index: 100;
 }
 header .navbar {
-  padding: 0 1.5rem;
+  height: 100%;
   text-align: center;
   display: flex;
   position: relative;
@@ -113,6 +120,7 @@ header .navbar .iconos a .botonCarrito span {
   font-family: "lato", Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 400;
   padding: 2rem;
+  padding-top: 0;
 }
 
 /*-----------modal confirmación de edad-----------*/
@@ -181,59 +189,65 @@ header .navbar .iconos a .botonCarrito span {
   padding: 30px;
 }
 
+.curva {
+  width: 100vw;
+  display: flex;
+}
+
 /* ------------banner--------------*/
 .banner {
-  height: 100vh;
+  min-height: 75vh;
   width: 100vw;
-  position: absolute;
+  margin-top: 5em;
 }
 .banner .contenedorBanner {
   height: 100%;
-  padding: 4rem;
   background-color: #B8D9D0;
-  position: relative;
-  margin-left: auto;
   padding-left: 3rem;
   padding-right: 3rem;
   display: flex;
+  align-items: center;
 }
-.banner .contenedorBanner div {
+.banner .contenedorBanner .tituloBanner {
   width: 53%;
-  height: auto;
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-.banner .contenedorBanner div .tituloBanner {
-  margin-bottom: 3rem;
-  width: 100%;
-}
-.banner .contenedorBanner div .tituloBanner h1 {
+.banner .contenedorBanner .tituloBanner h1 {
   font-size: 6rem;
+  padding: 1em 0 1em 0;
   width: 100%;
   line-height: 120%;
   padding-bottom: 2rem;
 }
-.banner .contenedorBanner div .tituloBanner h2 {
+.banner .contenedorBanner .tituloBanner h2 {
   font-family: "lato", Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.5rem;
   font-weight: 100;
   width: 100%;
 }
-.banner .contenedorBanner div .boton {
-  padding: 16px 70px;
+.banner .contenedorBanner .tituloBanner a {
+  text-decoration: inherit;
+  margin: 16px 0 16px 0;
+}
+.banner .contenedorBanner .tituloBanner a .boton {
+  height: 50px;
+  width: 300px;
   background-color: #F2798F;
   color: #fefefe;
+  border: none;
   cursor: pointer;
   border-radius: 10px;
   font-size: 22px;
-  text-decoration: inherit;
 }
 .banner .contenedorBanner img {
   height: auto;
-  width: 40vw;
+  width: 42%;
   display: block;
   position: absolute;
-  top: 2rem;
   right: 2rem;
-  bottom: -8rem;
   max-width: 100%;
 }
 
@@ -242,7 +256,6 @@ header .navbar .iconos a .botonCarrito span {
   height: auto;
   background-color: #faf8f4;
   padding: 2vh;
-  margin-top: 5rem;
 }
 .seccionProductos .contenedorProductos {
   width: 100%;
@@ -382,23 +395,23 @@ header .navbar .iconos a .botonCarrito span {
 /* ------------modal carrito--------------*/
 .modalContenedorCarrito {
   position: fixed;
-  top: 5.1rem;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: right;
-  transition: all 0.5s;
+  transition: all 0.2s;
   opacity: 0;
   visibility: hidden;
-  z-index: 9;
+  z-index: 999;
 }
 .modalContenedorCarrito .modalCarrito {
   width: 38vw;
   height: 100vh;
+  padding-bottom: 8em;
   background-color: #fefefe;
   transition: all 0.5s;
-  padding-bottom: 8rem;
   display: flex;
   position: absolute;
   flex-direction: column;
@@ -406,25 +419,39 @@ header .navbar .iconos a .botonCarrito span {
   overflow-y: auto;
   overflow-x: hidden;
 }
+.modalContenedorCarrito .modalCarrito::-webkit-scrollbar {
+  width: 10px;
+}
 .modalContenedorCarrito .modalCarrito h3 {
+  width: 38vw;
+  height: 5rem;
   font-size: 20px;
   font-family: "lato", Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0.5em;
+  margin-top: 1em;
   text-align: center;
 }
 .modalContenedorCarrito .modalCarrito .carritoCerrar {
-  height: 40px;
-  width: 40px;
+  height: 44px;
+  width: 44px;
   background-color: #fefefe;
-  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   position: absolute;
-  top: 0;
-  right: 16px;
+  top: 2em;
+  left: 32vw;
   cursor: pointer;
+}
+.modalContenedorCarrito .modalCarrito .carritoCerrar i {
+  font-size: 22px;
+  color: #111111;
 }
 .modalContenedorCarrito .modalCarrito .productoEnCarrito {
   height: 140px;
   width: 38vw;
+  padding: 0.5em;
 }
 .modalContenedorCarrito .modalCarrito .productoEnCarrito .fila {
   height: 140px;
@@ -481,6 +508,7 @@ header .navbar .iconos a .botonCarrito span {
   font-size: 16px;
   border: none;
   background-color: #fefefe;
+  padding: 16px;
   cursor: pointer;
 }
 .modalContenedorCarrito .modalCarrito .precioTotal {
@@ -495,20 +523,47 @@ header .navbar .iconos a .botonCarrito span {
   justify-content: space-between;
   justify-items: center;
 }
+.modalContenedorCarrito .modalCarrito .comprar {
+  height: 40px;
+  width: 80%;
+  margin: 32px 16px 22px 16px;
+  font-size: 18px;
+  background-color: #B8D9D0;
+  border: solid 2px #B8D9D0;
+  cursor: pointer;
+}
 .modalContenedorCarrito .modalCarrito .vaciarCarrito {
   height: 40px;
-  width: 260px;
-  margin: 16px;
+  width: 80%;
   font-size: 18px;
   background-color: #fefefe;
   border: solid 2px #B8D9D0;
   cursor: pointer;
 }
 
-.modalActive {
+.modalActivo {
   opacity: 1;
   visibility: visible;
-  transition: all 0.5s;
+  transition: all 0.2s;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.sobreNosotros {
+  width: 100vw;
+  height: auto;
+  background-color: #ffbeca;
+  padding: 2em;
+  padding-top: 0;
+  display: flex;
+  justify-content: center;
+}
+.sobreNosotros .quienesSomos {
+  max-width: 84%;
+}
+.sobreNosotros .quienesSomos p {
+  font-size: 24px;
+  text-align: center;
+  padding: 2em;
 }
 
 .seccionContacto {
@@ -556,4 +611,7 @@ header .navbar .iconos a .botonCarrito span {
   border: 1px solid #F2798F;
   min-width: 300px;
   color: #fefefe;
+}
+.seccionContacto form .errorDeCampo {
+  border: 2px solid rgb(255, 0, 0);
 }/*# sourceMappingURL=estilos.css.map */

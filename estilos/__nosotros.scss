@@ -1,0 +1,20 @@
+.sobreNosotros {
+    width: 100vw;
+    height: auto;
+    background-color: #ffbeca;
+    padding: 2em;
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+
+    .quienesSomos {
+        // width: 60%;
+        max-width: 84%;
+
+        p {
+            font-size: 24px;
+            text-align: center;
+            padding: 2em;
+        }
+    }
+}

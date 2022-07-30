@@ -19,7 +19,7 @@
             <div class="navbarLeft">
                 <ul>
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="./paginas/cervezas.html">Nuestras cervezas</a></li>
+                    <li><a href="#seccionProductos">Nuestras cervezas</a></li>
                 </ul>
             </div>
             <a class="logo" href="#"><img src="./imagenes/beerLogo.png"></a>
@@ -31,7 +31,7 @@
             </div>
             <div class="iconos">
                     <a>
-                        <div class="botonCarrito" id="botonCarrito">
+                        <div class="botonCarrito">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span id="contadorCarrito">0</span>
                         </div>
@@ -41,21 +41,65 @@
     </header>
     <main class="banner">
         <section class="contenedorBanner">
-            <div>
                 <div class="tituloBanner">
                     <h1 id="saludo">Lorem ipsum dolor</h1>
                     <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, voluptatum. Tempora porro voluptatum accusamus nam architecto temporibus eius necessitatibus</h2>
+                    <a href=""><button class="boton" href="">Ver más</button></a>
                 </div>
-                <a class="boton" href="">Ver más</a>
-            </div>
             <img src="./imagenes/mockupBirra.png">
         </section>
     </main>
+    <img class="curva" src="./imagenes/curvaVerde.png" alt="">
+    <section class="seccionProductos" id="seccionProductos">
+            <h2 class="titulo">Nuestras cervezas</h2>
+            <div id="contenedorProductos" class="contenedorProductos">
+                <!-- productos diseñados en js -->
+            </div>
+    </section>
+    <img class="curva" src="./imagenes/curvaRosa.png" alt="">
+    <section class="sobreNosotros">
+        <div class="quienesSomos">
+            <h2 class="titulo">¿Quienes somos?</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit ea eaque, laborum doloribus suscipit mollitia numquam nulla, eligendi temporibus quaerat voluptatibus, facere saepe voluptate quod odio et itaque? Magnam, optio.
+            </p>
+            <p>
+                Explicabo accusamus suscipit amet, fugit ducimus, id tempora quidem ab sed animi voluptate. Saepe fugiat, veniam, molestias repellendus dolorum dicta minus dolorem ullam qui quisquam temporibus optio at vero corrupti.
+                Minus atque laborum labore doloribus rem magnam mollitia itaque sapiente repudiandae recusandae ipsum quidem aliquam iure earum quasi tempore repellat eum nesciunt, soluta modi eius molestias illum! Distinctio, voluptas voluptatum.
+            </p>
+            <p>
+                Natus numquam iusto laudantium odit molestias soluta, veniam voluptatum quam hic eaque! Quisquam eaque ducimus ipsum ratione vitae hic ex rerum, dolore velit delectus voluptatem, tenetur neque illum dignissimos amet.
+            </p>
+            <p>
+                In vel consectetur beatae obcaecati! Dolore numquam sed saepe eligendi sint dolorem repellat qui cum est veritatis! Distinctio necessitatibus inventore nulla blanditiis rerum fugiat? Praesentium voluptatem deleniti dolor? Non, commodi.
+            </p>
+        </div>
+    </section>
+    <img class="curva" src="./imagenes/curvaRosaVerde.png" alt="">
+    <section class="seccionContacto">
+        <h2 class="titulo" id="tituloContacto">Te damos la bienvenida</h2>
+        <p id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <form id="formulario">
+            <fieldset>
+                <label id="nombreLabel">Nombre<input id="nombre" type="text" placeholder="Nombre"></input></label>
+                <label id="emailLabel">Email<input id="email" type="email" placeholder="Email"></input></label>
+                <label id="edadLabel">Edad (optional)<input id="edad" type="number" placeholder="Edad" min="18" max="110"></input></label>
+            </fieldset>
+            <label>Dejanos tu comentario
+                <textarea id="comentario" type="text" rows="3" cols="30" placeholder="Comentario"></textarea>
+            </label>
+            <fieldset>
+                <input id="submit" type="submit" value="Submit" />
+            </fieldset>
+        </form>
+    </section>
     <div class="modalContenedorCarrito" id="modalContenedorCarrito">
         <div class="modalCarrito">
-            <h3>CARRITO</h3>
-            <button id="carritoCerrar" class="carritoCerrar"><i class="fa-solid fa-xmark"></i>
+            <button class="carritoCerrar">
+                <div class="circulo"></div>
+                <i class="fa-solid fa-xmark"></i>
             </button>
+            <h3>CARRITO</h3>
             <div id="carritoContenedor" class="carritoContenedor">
                 <!-- modal en JavaScript index -->
             </div>
@@ -63,6 +107,7 @@
                 PRECIO TOTAL: 
                 <span id="precioTotal">0</span>
             </p>
+            <button class="comprar">Comprar</button>
             <button id="vaciarCarrito" class="vaciarCarrito">Vaciar carrito</button>
         </div>
     </div>
@@ -70,7 +115,8 @@
 
     </footer>
 
-    <script src="./modal.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./formulario.js"></script>
     <script src="./index.js"></script>
 </body>
 </html>

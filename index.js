@@ -14,9 +14,9 @@ const precioTotal = document.getElementById('precioTotal');
 
 const modalContenedor = document.getElementById('modalContenedorCarrito');
 
-const botonCarrito = window.document.querySelector('#botonCarrito');
+const botonCarrito = window.document.querySelector('.botonCarrito');
 
-const cerrarCarrito = window.document.querySelector('#carritoCerrar')
+const cerrarCarrito = window.document.querySelector('.carritoCerrar')
 
 let carrito = []
 
@@ -25,11 +25,11 @@ let carrito = []
 // eventos del boton carrito
 
 botonCarrito.addEventListener("click", () => {
-    modalContenedor.classList.add('modalActive');
+    modalContenedor.classList.add('modalActivo');
 });
 
 cerrarCarrito.addEventListener("click", () => {
-    modalContenedor.classList.remove('modalActive');
+    modalContenedor.classList.remove('modalActivo');
 });
 
 // traer productos cargados en JSON

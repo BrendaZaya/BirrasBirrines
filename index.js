@@ -34,7 +34,7 @@ cerrarCarrito.addEventListener("click", () => {
 
 // traer productos cargados en JSON
 
-fetch("../data.json")
+fetch("./data.json")
 .then(resp => resp.json())
 .then(productos => {
     

@@ -86,14 +86,29 @@ fetch("./data.json")
             agregarAlCarrito(producto.id)
             
             // alerta de producto agregado
-            Swal.fire({
+            // Swal.fire({
+            //     position: 'bottom-end',
+            //     icon: 'success',
+            //     title: 'Producto agregado al carrito',
+            //     showConfirmButton: false,
+            //     timer: 1500,
+            //     width: '300px',
+            // });
+            const Toast = Swal.mixin({
+                toast: true,
                 position: 'bottom-end',
-                icon: 'success',
-                title: 'Producto agregado al carrito',
                 showConfirmButton: false,
                 timer: 1500,
-                width: '300px',
-            });
+                timerProgressBar: true,
+                // didOpen: (toast) => {
+                //   toast.addEventListener('mouseenter', Swal.stopTimer)
+                //   toast.addEventListener('mouseleave', Swal.resumeTimer)
+                // }
+            })
+                Toast.fire({
+                icon: 'success',
+                title: 'Producto agregado al carrito'
+                })
         });
     });
             

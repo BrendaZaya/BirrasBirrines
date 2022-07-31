@@ -18,15 +18,15 @@
         <nav class="navbar">
             <div class="navbarLeft">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#seccionProductos">Nuestras cervezas</a></li>
                 </ul>
             </div>
             <a class="logo" href="#"><img src="./imagenes/beerLogo.png"></a>
             <div class="navbarRight">
                 <ul>
-                    <li><a href="./paginas/sobreNosotros.html">Sobre nosotros</a></li>
-                    <li><a href="./paginas/contacto.html">Contacto</a></li>
+                    <li><a href="#seccionSobreNosotros">Sobre nosotros</a></li>
+                    <li><a href="#seccionContacto">Contacto</a></li>
                 </ul>
             </div>
             <div class="iconos">
@@ -39,7 +39,7 @@
             </div>
         </nav>
     </header>
-    <main class="banner">
+    <main class="banner" id="inicio">
         <section class="contenedorBanner">
                 <div class="tituloBanner">
                     <h1 id="saludo">Lorem ipsum dolor</h1>
@@ -57,7 +57,7 @@
             </div>
     </section>
     <img class="curva" src="./imagenes/curvaRosa.png" alt="">
-    <section class="sobreNosotros">
+    <section class="sobreNosotros" id="seccionSobreNosotros">
         <div class="quienesSomos">
             <h2 class="titulo">¿Quienes somos?</h2>
             <p>
@@ -76,21 +76,22 @@
         </div>
     </section>
     <img class="curva" src="./imagenes/curvaRosaVerde.png" alt="">
-    <section class="seccionContacto">
+    <section class="seccionContacto" id="seccionContacto">
         <h2 class="titulo" id="tituloContacto">Te damos la bienvenida</h2>
         <p id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <form id="formulario">
+        <form action="" id="formulario">
             <fieldset>
                 <label id="nombreLabel">Nombre<input id="nombre" type="text" placeholder="Nombre"></input></label>
-                <label id="emailLabel">Email<input id="email" type="email" placeholder="Email"></input></label>
-                <label id="edadLabel">Edad (optional)<input id="edad" type="number" placeholder="Edad" min="18" max="110"></input></label>
+                <label id="emailLabel">Email<input id="email"  placeholder="Email"></input></label>
+                <label id="edadLabel">Edad<input id="edad" type="number" placeholder="Edad"></input></label>
             </fieldset>
-            <label>Dejanos tu comentario
+            <label id="comentarioLabel">Dejanos tu comentario
                 <textarea id="comentario" type="text" rows="3" cols="30" placeholder="Comentario"></textarea>
             </label>
             <fieldset>
-                <input id="submit" type="submit" value="Submit" />
+                <input id="submit" type="submit" value="Submit"/>
             </fieldset>
+            <p id="error"></p>
         </form>
     </section>
     <div class="modalContenedorCarrito" id="modalContenedorCarrito">

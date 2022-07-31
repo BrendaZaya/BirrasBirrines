@@ -1,34 +1,66 @@
+const enviarFormulario = document.getElementById('submit');
 
 // validación de formulario
+
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("formulario").addEventListener('submit', validarFormulario); 
 });
 
-function validarFormulario(evento) {
+const validarFormulario = (evento) => {
     evento.preventDefault();
-    var nombre = document.getElementById('nombre').value;
-    if(nombre.length == 0) {
-        const nombre = document.getElementById('nombre');
-        nombre.classList.add('errorDeCampo');
+
+    // Declaración de variables 
+
+    const nombre = document.getElementById('nombre');
+    const email = document.getElementById('email');
+    const edad = document.getElementById('edad');
+    const comentario = document.getElementById('comentario');
+
+    // validar nombre
+
+    if(nombre.value === "") {
         nombreLabel.innerHTML = `Nombre <input class="errorDeCampo" id="nombre" type="text" placeholder="Ingresá tu nombre"></input>
         `
-        return;
+        return false;
     }
-    var email = document.getElementById('email').value;
-    if(email.length == 0) {
-        alert('No has escrito tu email');
-        return;
-    }
-    var edad = document.getElementById('edad').value;
-    if (edad.length >= 18) {
-        alert('Tenés que ser mayor de edad');
-        return;
-    }
-    var comentario = document.getElementById('edad').value;
-    if (comentario.length < 30) {
-        alert('Dejanos un comentario');
-        return;
-    }
-    this.submit();
-}
 
+    // validar email
+    if(email.value === "") {
+        emailLabel.innerHTML = `Email <input class="errorDeCampo" id="email" type="text" placeholder="Ingresá tu email"></input>
+        `
+        return false;
+    }
+
+    if (!emailValido(email.value)) {
+        emailLabel.innerHTML = `Email <input class="errorDeCampo" id="email" type="text" placeholder="Ingresá un email valido"></input>
+        `
+        return false;
+    }
+
+    // validar edad
+    if (edad.value <= 18) {
+        // edad.classList.add('errorDeCampo');
+        edadLabel.innerHTML = `Edad <input class="errorDeCampo" id="edad" type="text" placeholder="Debés ser mayor de 18"></input>
+        `
+        return false;
+    }
+
+    // validar mensaje
+
+    if (comentario.value.length < 20) {
+        comentarioLabel.innerHTML = `Dejanos tu comentario <textarea class="errorDeCampo" id="comentario" type="text" placeholder="Dejanos tu comentario"></textarea>
+        `
+        return false;
+    }
+
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Tu mensaje se envío correctamente',
+        showConfirmButton: false,
+        timer: 2000
+    })
+}
+const emailValido = email => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}

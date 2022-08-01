@@ -141,8 +141,9 @@
                     transition: .4s all;
 
                     &:hover {
-                        background-color: rgb(255, 238, 238);
+                        // background-color: rgb(255, 238, 238);
                         transition: .4s all;
+                        box-shadow: 5px 5px 5px #aaa;
                     }
 
                     .agregarAlCarrito {
@@ -313,7 +314,6 @@
                 background-color: $colorBlanco;
                 padding: 16px;
                 cursor: pointer;
-
             }
         }
 
@@ -338,6 +338,12 @@
             background-color: $colorPrimario;
             border: solid 2px $colorPrimario;
             cursor: pointer;
+            transition: 0.5s;
+
+            &:hover {
+                box-shadow: 5px 5px 5px #aaa;
+                transition: 0.5s;
+            }
         }
 
         .vaciarCarrito {
@@ -347,6 +353,12 @@
             background-color: $colorBlanco;
             border: solid 2px $colorPrimario;
             cursor: pointer;
+            transition: 0.5s;
+
+            &:hover {
+                box-shadow: 5px 5px 5px #aaa;
+                transition: 0.5s;
+            }
         }
     }
 }

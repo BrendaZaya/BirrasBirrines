@@ -1,7 +1,7 @@
 
 /* ------------banner--------------*/
 .banner {
-    min-height: 75vh;
+    height: 70vh;
     width: 100vw;
     margin-top: 5em;
 
@@ -11,6 +11,7 @@
         padding-left: 3rem;
         padding-right: 3rem;
         display: flex;
+        justify-content: space-around;
         align-items: center;
 
         .tituloBanner {
@@ -35,29 +36,27 @@
                 width: 100%;
             }
 
-            a {
-                text-decoration: inherit;
-                margin: 16px 0 16px 0;
+            // a {
+            //     text-decoration: inherit;
+            //     margin: 16px 0 16px 0;
 
-                .boton {
-                    height: 50px;
-                    width: 300px;
-                    background-color: $colorcta;
-                    color: $colorBlanco;
-                    border: none;
-                    cursor: pointer;
-                    border-radius: 10px;
-                    font-size: 22px;
-                }
-            }
+            //     .boton {
+            //         height: 50px;
+            //         width: 300px;
+            //         background-color: $colorcta;
+            //         color: $colorBlanco;
+            //         border: none;
+            //         cursor: pointer;
+            //         border-radius: 10px;
+            //         font-size: 22px;
+            //     }
+            // }
         }
         
         img {
             height: auto;
             width: 42%;
             display: block;
-            position: absolute;
-            right: 2rem;
             max-width: 100%;
         }
     }

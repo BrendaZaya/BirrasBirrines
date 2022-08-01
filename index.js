@@ -73,7 +73,7 @@ fetch("./data.json")
                     <p class="agregarAlCarrito">AGREGAR AL CARRITO</p>
                 </button>
                 <div class="descripcionProducto">
-                    <p class="textoDescriptivo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, at recusandae!</p>
+                    <p class="textoDescriptivo">${producto.descripcion}</p>
                 </div>
             </div>
             `
@@ -86,24 +86,11 @@ fetch("./data.json")
             agregarAlCarrito(producto.id)
             
             // alerta de producto agregado
-            // Swal.fire({
-            //     position: 'bottom-end',
-            //     icon: 'success',
-            //     title: 'Producto agregado al carrito',
-            //     showConfirmButton: false,
-            //     timer: 1500,
-            //     width: '300px',
-            // });
             const Toast = Swal.mixin({
                 toast: true,
                 position: 'bottom-end',
                 showConfirmButton: false,
                 timer: 1500,
-                timerProgressBar: true,
-                // didOpen: (toast) => {
-                //   toast.addEventListener('mouseenter', Swal.stopTimer)
-                //   toast.addEventListener('mouseleave', Swal.resumeTimer)
-                // }
             })
                 Toast.fire({
                 icon: 'success',
@@ -192,43 +179,3 @@ fetch("./data.json")
     }
 
 }).catch(error => console.log(error));
-
-
-
-// verificador de edad
-
-// const mayor = document.getElementById("mayorDeEdad");
-// const menor = document.getElementById("menorDeEdad");
-// document.getElementById("contenedorModal").style.display= "none";
-// let validarEdad;
-// const validacionStorage = sessionStorage.getItem('validarEdad');
-
-
-// function abrirVentana() {
-//     /*mostrar modal*/
-//     document.getElementById("contenedorModal").style.display= "block";
-// }
-
-// function respuestaClick () {
-//     /*ocultar modal*/
-//         contenedorModal.classList.remove('contenedorModal');
-// }
-
-// function salirDelSitio () {
-//     /*llevar a otro sitio y limpiar storage*/
-//     window.location = "https://www.youtube.com/watch?v=ZAAjm4IJhFY";
-//     sessionStorage.clear("validarEdad", validarEdad);
-// }
-
-// mayor.addEventListener("click", respuestaClick);
-// menor.addEventListener("click", salirDelSitio);
-
-// if (validacionStorage) {
-//     /*si no está guardado la validacion*/
-//     respuestaClick();
-//     validarEdad = validacionStorage;
-// } else {
-//     /*si está guardada la validacion*/
-//     validarEdad = setTimeout(abrirVentana, 3000);
-//     sessionStorage.setItem("validarEdad", validarEdad);
-// }

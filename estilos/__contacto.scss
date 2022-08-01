@@ -50,6 +50,15 @@
             border: 1px solid $colorcta;
             min-width: 300px;
             color: $colorBlanco;
+            transition: 0.5s;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 5px 5px 5px #aaa;
+                transform: scale(1.1);
+                transition: 0.5s;
+            }
+            
         }
 
         // inputs con errores

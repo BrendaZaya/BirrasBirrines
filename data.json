@@ -10,7 +10,8 @@
         "img": "./imagenes/lata2.png",
         "icono": "./imagenes/iconLupulo2.png",
         "cantidad": 1,
-        "precio": 260
+        "precio": 260,
+        "descripcion": "Amarga, cobriza, espumosa, lupulizada, floral y afrutada. Lo tiene todo en su compleja simplicidad."
     },
     
     {
@@ -24,7 +25,8 @@
         "img": "./imagenes/lata2.png",
         "icono": "./imagenes/iconFrutada.png",
         "cantidad": 1,
-        "precio": 220
+        "precio": 220,
+        "descripcion": "Clara, tonalidad amarilla brillante y un gusto prominente. Frutada y con destellos finales de lúpulo."
     },
     
     {
@@ -38,7 +40,8 @@
         "img": "./imagenes/lata2.png",
         "icono": "./imagenes/iconCafeFuerte.png",
         "cantidad": 1,
-        "precio": 240
+        "precio": 240,
+        "descripcion": "Color oscuro, proviene de la malta muy tostada. Amarga, con toques de café"
     },
     
     {
@@ -52,7 +55,8 @@
         "img": "./imagenes/lata2.png",
         "icono": "./imagenes/iconLupulo1.png",
         "cantidad": 1,
-        "precio": 260
+        "precio": 260,
+        "descripcion": "Un exterior fuerte, agresivo y un poco amargo. Sabor a lúpulo y caramelo."
     },
     
     {
@@ -66,7 +70,8 @@
         "img": "./imagenes/lata2.png",
         "icono": "./imagenes/iconCaramel.png",
         "cantidad": 1,
-        "precio": 240
+        "precio": 240,
+        "descripcion": "Malta y licor, con rasgos de nuez y caramelo. Barley Wine, cuando la vid se vuelve cebada."
     },
 
     {
@@ -80,7 +85,8 @@
         "img": "./imagenes/lata2.png",
         "icono": "./imagenes/iconChocolate.png",
         "cantidad": 1,
-        "precio": 240
+        "precio": 240,
+        "descripcion": "Color marrón oscuro, persistente y cremosa. Tostado y con toques de chocolate."
     },
 
     {
@@ -94,7 +100,8 @@
         "img": "./imagenes/lata2.png",
         "icono": "./imagenes/iconHoney.png",
         "cantidad": 1,
-        "precio": 220
+        "precio": 220,
+        "descripcion": "Color dorado produndo. Sabor a cereal con un toque dulce por la miel. Refrescante, de cuerpo liviano."
     },
 
     {
@@ -108,7 +115,8 @@
         "img": "./imagenes/lata2.png",
         "icono": "./imagenes/iconRedHoney.png",
         "cantidad": 1,
-        "precio": 220
+        "precio": 220,
+        "descripcion": "Liviana, dulce y con aroma a miel. De sabor complejo y final seco."
     },
     
     {
@@ -122,7 +130,8 @@
         "img": "./imagenes/lata2.png",
         "icono": "./imagenes/iconMalta.png",
         "cantidad": 1,
-        "precio": 220
+        "precio": 220,
+        "descripcion": "Facil de beber, de color ambar rojiza. El aroma es dulce a malta y caramelo tostado"
     },
     
     {
@@ -136,7 +145,8 @@
         "img": "./imagenes/lata2.png",
         "icono": "./imagenes/iconFrutada.png",
         "cantidad": 1,
-        "precio": 220
+        "precio": 220,
+        "descripcion": "Dorada brillando y de espuma densa. Sabor frutada, con buen cuerpo y un ﬁnal amargo persistente."
     },
     
     {
@@ -150,7 +160,8 @@
         "img": "./imagenes/lata2.png",
         "icono": "./imagenes/iconCitrico.png",
         "cantidad": 1,
-        "precio": 240
+        "precio": 240,
+        "descripcion": "Cítrica, refrescante y moderna. Perfil seco y un limpio final amargo."
     },
     
     {
@@ -164,7 +175,8 @@
         "img": "./imagenes/lata2.png",
         "icono": "./imagenes/iconCafeSuave.png",
         "cantidad": 1,
-        "precio": 260
+        "precio": 260,
+        "descripcion": "Posee un color oscuro, de sabor intenso y cuerpo cremoso. Aromas tostados, café y un dejo dulzón"
     },
     
     {
@@ -178,7 +190,8 @@
         "img": "./imagenes/lata2.png",
         "icono": "./imagenes/iconLupulo1.png",
         "cantidad": 1,
-        "precio": 260
+        "precio": 260,
+        "descripcion": "Lupulada pero poco amarga. Destaca por ser muy turbia, afrutada y sedosa."
     },
 
     {
@@ -192,12 +205,13 @@
         "img": "./imagenes/lata2.png",
         "icono": "./imagenes/iconCafeFuerte.png",
         "cantidad": 1,
-        "precio": 240
+        "precio": 240,
+        "descripcion": "Amargor intenso, color casi negro, en boca presenta sabores a café y caramelo con un final seco."
     },
 
     {
         "id": 15,
-        "nombre": "PILSEN",
+        "nombre": "PILSNEN",
         "amargor": "BAJO",
         "ibu": "18",
         "aroma": "MALTA",
@@ -206,20 +220,22 @@
         "img": "./imagenes/lata2.png",
         "icono": "./imagenes/iconMalta.png",
         "cantidad": 1,
-        "precio": 220
+        "precio": 220,
+        "descripcion": "De color claro, aromas a maltas claras y ligera. Destaca por su gusto fresco pero a la vez intenso"
     },
 
     {
         "id": 16,
-        "nombre": "PILSEN",
+        "nombre": "SCOTCH ALE",
         "amargor": "BAJO",
-        "ibu": "18",
-        "aroma": "MALTA",
-        "ABV": "5%",
+        "ibu": "20",
+        "aroma": "CARAMELO",
+        "ABV": "8%",
         "tamaño": "500 cc",
         "img": "./imagenes/lata2.png",
-        "icono": "./imagenes/iconMalta.png",
+        "icono": "./imagenes/iconCaramel.png",
         "cantidad": 1,
-        "precio": 220
+        "precio": 240,
+        "descripcion": "Oscura de alta graduación alcohólica, con cuerpo ligero y un leve dulzor proveniente de la malta caramelo"
     }
 ]

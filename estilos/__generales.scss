@@ -25,6 +25,9 @@ body {
     $colorNegro: #111111;
     $colorSecundario: #faf8f4;
     $rosa: #ffbeca;
+    $colorLinkedin: #0B6BBF;
+    $colorBehance: #DFB322;
+    $colorMail: #a1c1aa;
 
 
     /* ------------tipografías--------------*/
@@ -46,8 +49,6 @@ header {
 
     .navbar {
         height: 100%;
-        // background-color: #F2798F;
-        // padding: 0 1.5rem;
         text-align: center;
         display: flex;
         position: relative;
@@ -64,9 +65,10 @@ header {
                 align-items: center;
                 
                 li {
+                    width: 220px;
                     list-style: none;
-                    padding: 0 2rem;
                     margin: 0;
+                    transition: all .2s;
 
                     a {
                         text-decoration: none;
@@ -74,6 +76,29 @@ header {
                         display: block;
                         padding: 1.7rem 1.4rem;
                         font-size: 1em;
+
+                    }
+
+                    &:hover {
+                        transform: translate(0px);
+                    }
+
+                    &::before, &::after {
+                        content: "";
+                        position: absolute;
+                        transition: all .4s;
+                    }
+
+                    &::after {
+                        width: 220px;
+                        height: 2px;
+                        bottom: 0;
+                        left: 0;
+                    }
+
+                    &:hover::before, &:hover::after {
+                        background: $colorcta;
+                        box-shadow: 0 0 10px $colorcta;
                     }
                 }
             }
@@ -92,15 +117,18 @@ header {
         .navbarRight {
             right: 0;
             padding-left: 1.5rem;
+            left: 0;
+            display: flex;
 
             ul {
                 display: flex;
                 align-items: center;
 
                 li {
+                    width: 220px;
                     list-style: none;
-                    padding: 0 2rem;
                     margin: 0;
+                    transition: all .2s;
 
                     a {
                         text-decoration: none;
@@ -108,6 +136,28 @@ header {
                         display: block;
                         padding: 1.7rem 1.4rem;
                         font-size: 1em;
+                    }
+
+                    &:hover {
+                        transform: translate(0px);
+                    }
+
+                    &::before, &::after {
+                        content: "";
+                        position: absolute;
+                        transition: all .4s;
+                    }
+
+                    &::after {
+                        width: 220px;
+                        height: 2px;
+                        bottom: 0;
+                        left: 0;
+                    }
+
+                    &:hover::before, &:hover::after {
+                        background: $colorcta;
+                        box-shadow: 0 0 10px $colorcta;
                     }
                 }
             }
@@ -161,85 +211,110 @@ header {
     padding-top: 0;
 }
 
-/*-----------modal confirmación de edad-----------*/
-
-.contenedorModal {
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(0, 0, 0, 0.8);
-    position: fixed;
-    // pointer-events: none;
-    opacity: 1;
-    top: 0;
-    z-index: 1050;
-
-    .modal {
-        width: 50vw;
-        margin: 50px auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: $colorBlanco;
-        border-radius: 32px;
-        box-shadow: 0px 0px 10px #000;
-
-        .logoModal {
-            max-width: 300px;
-            margin-bottom: 35px;
-            padding: 35px;
-
-            img {
-                width: 100%;
-                height: 100%;
-                border-style: none;
-                object-fit: cover;
-            }
-        }
-
-        h2 {
-            font-size: 36px;
-            font-family: $fontPrincipal;
-            color: $colorNegro;
-        }
-
-        .botonesModal {
-            height: auto;
-            width: 36%;
-            padding: 30px;
-            margin: 30px;
-            display: flex;
-            justify-content: space-between;
-
-            button {
-                width: 70px;
-                height: 70px;
-                background-color: $colorBlanco;
-                font-family: $fontDestacada;
-                font-size: 42px;
-                border-radius: 100%;
-                cursor: pointer;
-            }
-
-            .mayor {
-                border: 2px solid rgb(32, 174, 0);
-            }
-
-            .menor {
-                border: 2px solid rgb(218, 11, 11);
-            }
-        }
-
-        p {
-            font-family: $fontPrincipal;
-            font-size: 16px;
-            padding: 30px;
-        }
-    }
-}
+/* ------------Curva de separación--------------*/
 
 .curva {
     width: 100vw;
     display: flex;
-    // position: relative;
-    // top: 0;
+}
+
+//----------------------------footer--------------------------*/
+
+footer {
+    height: 24vh;
+    width: 100%;
+    background-color: $colorSecundario;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .socialIconos {
+        min-width: 20vw;
+        height: 16vh;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+        margin-top: 2vh;
+
+        li {
+            list-style: none;
+            padding: 20px;
+
+            a {
+                display: block;
+                position: relative;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 2em;
+                border-radius: 50%;
+                text-align: center;
+                color: $colorSecundario;
+                background: #000;
+                transition: 0.5s;
+                overflow: hidden;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 50px;
+                    z-index: -1;
+                    transform: scale(1);
+                    top: 0;
+                    left: 0;
+                    transition: 0.5s;
+                }
+
+                &:hover::before {
+                    transform: scale(0);
+                
+                }
+            }
+
+            &:nth-child(1) a,
+            &:nth-child(1) a::before {
+                background-color: $colorLinkedin;
+            }
+
+            &:nth-child(2) a,
+            &:nth-child(2) a::before {
+                background-color: $colorBehance;
+            }
+
+            &:nth-child(3) a,
+            &:nth-child(3) a::before {
+                background-color: $colorMail;
+            }
+
+            /* hover efecto */
+
+            &:nth-child(1) a:hover {
+                background-color: $colorSecundario;
+                color: $colorLinkedin;
+            }
+
+            &:nth-child(2) a:hover {
+                background-color: $colorSecundario;
+                color: $colorBehance;
+            }
+
+            &:nth-child(3) a:hover {
+                background-color: $colorSecundario;
+                color: $colorMail;
+            }
+        }
+    }
+
+    .copyright {
+        font-size: 12px;
+        color: $colorNegro;
+        padding: 10px;
+    }
 }

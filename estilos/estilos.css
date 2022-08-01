@@ -43,9 +43,10 @@ header .navbar .navbarLeft ul {
   align-items: center;
 }
 header .navbar .navbarLeft ul li {
+  width: 220px;
   list-style: none;
-  padding: 0 2rem;
   margin: 0;
+  transition: all 0.2s;
 }
 header .navbar .navbarLeft ul li a {
   text-decoration: none;
@@ -53,6 +54,24 @@ header .navbar .navbarLeft ul li a {
   display: block;
   padding: 1.7rem 1.4rem;
   font-size: 1em;
+}
+header .navbar .navbarLeft ul li:hover {
+  transform: translate(0px);
+}
+header .navbar .navbarLeft ul li::before, header .navbar .navbarLeft ul li::after {
+  content: "";
+  position: absolute;
+  transition: all 0.4s;
+}
+header .navbar .navbarLeft ul li::after {
+  width: 220px;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+}
+header .navbar .navbarLeft ul li:hover::before, header .navbar .navbarLeft ul li:hover::after {
+  background: #F2798F;
+  box-shadow: 0 0 10px #F2798F;
 }
 header .navbar .logo {
   padding: 1rem 1rem;
@@ -66,15 +85,18 @@ header .navbar .logo img {
 header .navbar .navbarRight {
   right: 0;
   padding-left: 1.5rem;
+  left: 0;
+  display: flex;
 }
 header .navbar .navbarRight ul {
   display: flex;
   align-items: center;
 }
 header .navbar .navbarRight ul li {
+  width: 220px;
   list-style: none;
-  padding: 0 2rem;
   margin: 0;
+  transition: all 0.2s;
 }
 header .navbar .navbarRight ul li a {
   text-decoration: none;
@@ -82,6 +104,24 @@ header .navbar .navbarRight ul li a {
   display: block;
   padding: 1.7rem 1.4rem;
   font-size: 1em;
+}
+header .navbar .navbarRight ul li:hover {
+  transform: translate(0px);
+}
+header .navbar .navbarRight ul li::before, header .navbar .navbarRight ul li::after {
+  content: "";
+  position: absolute;
+  transition: all 0.4s;
+}
+header .navbar .navbarRight ul li::after {
+  width: 220px;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+}
+header .navbar .navbarRight ul li:hover::before, header .navbar .navbarRight ul li:hover::after {
+  background: #F2798F;
+  box-shadow: 0 0 10px #F2798F;
 }
 header .navbar .iconos {
   height: 100%;
@@ -123,80 +163,96 @@ header .navbar .iconos a .botonCarrito span {
   padding-top: 0;
 }
 
-/*-----------modal confirmación de edad-----------*/
-.contenedorModal {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  opacity: 1;
-  top: 0;
-  z-index: 1050;
-}
-.contenedorModal .modal {
-  width: 50vw;
-  margin: 50px auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fefefe;
-  border-radius: 32px;
-  box-shadow: 0px 0px 10px #000;
-}
-.contenedorModal .modal .logoModal {
-  max-width: 300px;
-  margin-bottom: 35px;
-  padding: 35px;
-}
-.contenedorModal .modal .logoModal img {
-  width: 100%;
-  height: 100%;
-  border-style: none;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.contenedorModal .modal h2 {
-  font-size: 36px;
-  font-family: "lato", Verdana, Geneva, Tahoma, sans-serif;
-  color: #111111;
-}
-.contenedorModal .modal .botonesModal {
-  height: auto;
-  width: 36%;
-  padding: 30px;
-  margin: 30px;
-  display: flex;
-  justify-content: space-between;
-}
-.contenedorModal .modal .botonesModal button {
-  width: 70px;
-  height: 70px;
-  background-color: #fefefe;
-  font-family: "Six Caps", sans-serif;
-  font-size: 42px;
-  border-radius: 100%;
-  cursor: pointer;
-}
-.contenedorModal .modal .botonesModal .mayor {
-  border: 2px solid rgb(32, 174, 0);
-}
-.contenedorModal .modal .botonesModal .menor {
-  border: 2px solid rgb(218, 11, 11);
-}
-.contenedorModal .modal p {
-  font-family: "lato", Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 16px;
-  padding: 30px;
-}
-
+/* ------------Curva de separación--------------*/
 .curva {
   width: 100vw;
   display: flex;
 }
 
+footer {
+  height: 24vh;
+  width: 100%;
+  background-color: #faf8f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .socialIconos {
+  min-width: 20vw;
+  height: 16vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin-top: 2vh;
+}
+footer .socialIconos li {
+  list-style: none;
+  padding: 20px;
+  /* hover efecto */
+}
+footer .socialIconos li a {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 2em;
+  border-radius: 50%;
+  text-align: center;
+  color: #faf8f4;
+  background: #000;
+  transition: 0.5s;
+  overflow: hidden;
+}
+footer .socialIconos li a:hover {
+  transform: scale(1.2);
+}
+footer .socialIconos li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  z-index: -1;
+  transform: scale(1);
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+footer .socialIconos li a:hover::before {
+  transform: scale(0);
+}
+footer .socialIconos li:nth-child(1) a, footer .socialIconos li:nth-child(1) a::before {
+  background-color: #0B6BBF;
+}
+footer .socialIconos li:nth-child(2) a, footer .socialIconos li:nth-child(2) a::before {
+  background-color: #DFB322;
+}
+footer .socialIconos li:nth-child(3) a, footer .socialIconos li:nth-child(3) a::before {
+  background-color: #a1c1aa;
+}
+footer .socialIconos li:nth-child(1) a:hover {
+  background-color: #faf8f4;
+  color: #0B6BBF;
+}
+footer .socialIconos li:nth-child(2) a:hover {
+  background-color: #faf8f4;
+  color: #DFB322;
+}
+footer .socialIconos li:nth-child(3) a:hover {
+  background-color: #faf8f4;
+  color: #a1c1aa;
+}
+footer .copyright {
+  font-size: 12px;
+  color: #111111;
+  padding: 10px;
+}
+
 /* ------------banner--------------*/
 .banner {
-  min-height: 75vh;
+  height: 70vh;
   width: 100vw;
   margin-top: 5em;
 }
@@ -206,6 +262,7 @@ header .navbar .iconos a .botonCarrito span {
   padding-left: 3rem;
   padding-right: 3rem;
   display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 .banner .contenedorBanner .tituloBanner {
@@ -228,26 +285,10 @@ header .navbar .iconos a .botonCarrito span {
   font-weight: 100;
   width: 100%;
 }
-.banner .contenedorBanner .tituloBanner a {
-  text-decoration: inherit;
-  margin: 16px 0 16px 0;
-}
-.banner .contenedorBanner .tituloBanner a .boton {
-  height: 50px;
-  width: 300px;
-  background-color: #F2798F;
-  color: #fefefe;
-  border: none;
-  cursor: pointer;
-  border-radius: 10px;
-  font-size: 22px;
-}
 .banner .contenedorBanner img {
   height: auto;
   width: 42%;
   display: block;
-  position: absolute;
-  right: 2rem;
   max-width: 100%;
 }
 
@@ -370,8 +411,8 @@ header .navbar .iconos a .botonCarrito span {
   transition: 0.4s all;
 }
 .seccionProductos .contenedorProductos .producto .infoProducto .botonAgregar:hover {
-  background-color: rgb(255, 238, 238);
   transition: 0.4s all;
+  box-shadow: 5px 5px 5px #aaa;
 }
 .seccionProductos .contenedorProductos .producto .infoProducto .botonAgregar .agregarAlCarrito {
   font-size: 14px;
@@ -531,6 +572,11 @@ header .navbar .iconos a .botonCarrito span {
   background-color: #B8D9D0;
   border: solid 2px #B8D9D0;
   cursor: pointer;
+  transition: 0.5s;
+}
+.modalContenedorCarrito .modalCarrito .comprar:hover {
+  box-shadow: 5px 5px 5px #aaa;
+  transition: 0.5s;
 }
 .modalContenedorCarrito .modalCarrito .vaciarCarrito {
   height: 40px;
@@ -539,6 +585,11 @@ header .navbar .iconos a .botonCarrito span {
   background-color: #fefefe;
   border: solid 2px #B8D9D0;
   cursor: pointer;
+  transition: 0.5s;
+}
+.modalContenedorCarrito .modalCarrito .vaciarCarrito:hover {
+  box-shadow: 5px 5px 5px #aaa;
+  transition: 0.5s;
 }
 
 .modalActivo {
@@ -611,6 +662,13 @@ header .navbar .iconos a .botonCarrito span {
   border: 1px solid #F2798F;
   min-width: 300px;
   color: #fefefe;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.seccionContacto form input[type=submit]:hover {
+  box-shadow: 5px 5px 5px #aaa;
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 .seccionContacto form .errorDeCampo {
   border: 2px solid #900;

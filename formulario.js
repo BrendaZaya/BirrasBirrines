@@ -6,6 +6,12 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("formulario").addEventListener('submit', validarFormulario); 
 });
 
+// Reseteo del formulario
+
+function limpiarFormulario() {
+    document.getElementById("formulario").reset();
+}
+
 const validarFormulario = (evento) => {
     evento.preventDefault();
 
@@ -53,6 +59,8 @@ const validarFormulario = (evento) => {
         return false;
     }
 
+    // Alerta de envío
+
     Swal.fire({
         position: 'center',
         icon: 'success',
@@ -60,7 +68,11 @@ const validarFormulario = (evento) => {
         showConfirmButton: false,
         timer: 2000
     })
+
+    limpiarFormulario()
 }
+
+// Tipos de mails validos
 const emailValido = email => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }

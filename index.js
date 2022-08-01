@@ -1,5 +1,5 @@
 
-// traer contenedores
+// Declaracion de variables
 
 const contenedorProductos = document.getElementById('contenedorProductos');
 

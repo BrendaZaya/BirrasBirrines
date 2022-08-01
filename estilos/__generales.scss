@@ -46,24 +46,26 @@ header {
     z-index: 100;
 
     .navbar {
+        width: 100%;
         height: 100%;
         text-align: center;
         display: flex;
         position: relative;
-        justify-content: center;
+        justify-content: space-evenly;
 
         .navbarLeft {
             left: 0;
-            padding-right: 1.5rem;
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-around;
 
             ul {
+                margin-right: 24px;
                 display: flex;
                 align-items: center;
+                // justify-content: space-between;
                 
                 li {
-                    width: 220px;
+                    width: 200px;
                     list-style: none;
                     margin: 0;
                     transition: all .2s;
@@ -88,7 +90,7 @@ header {
                     }
 
                     &::after {
-                        width: 220px;
+                        width: 200px;
                         height: 2px;
                         bottom: 0;
                         left: 0;
@@ -103,27 +105,30 @@ header {
         }
 
         .logo {
-                padding: 1rem 1rem;
+            margin: 1rem 0.5rem;
 
                 img {
                     width: 6em;
                     height: 2.5em;
                     object-fit: cover;
+                    display: block;
                 }
         }
 
         .navbarRight {
             right: 0;
-            padding-left: 1.5rem;
             left: 0;
             display: flex;
+            justify-content: space-around;
 
             ul {
+                margin-left: 24px;
                 display: flex;
                 align-items: center;
+                // justify-content: space-around;
 
                 li {
-                    width: 220px;
+                    width: 200px;
                     list-style: none;
                     margin: 0;
                     transition: all .2s;
@@ -147,7 +152,7 @@ header {
                     }
 
                     &::after {
-                        width: 220px;
+                        width: 200px;
                         height: 2px;
                         bottom: 0;
                         left: 0;
@@ -314,5 +319,48 @@ footer {
         font-size: 12px;
         color: $colorNegro;
         padding: 10px;
+    }
+}
+
+// Media querys para tablets 
+
+@media only screen and (max-width: 1024px) {
+    header {
+        .navbar {
+            justify-content: space-evenly;
+            .navbarLeft {
+                ul {
+                    li {
+                        width: 120px;
+
+                        a {
+                            padding: 1rem 1rem;
+                        }
+                    }
+                }
+            }
+            .navbarRight {
+                ul {
+                    display: flex;
+                    align-items: center;
+                    li {
+                        width: 120px;
+                        a {
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+
+            .iconos {
+                right: 8px;
+            }
+        }
+    }
+
+    .titulo {
+        font-size: 32px;
+        font-weight: 300;
+        padding: 1rem;
     }
 }

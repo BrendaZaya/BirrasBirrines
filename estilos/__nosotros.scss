@@ -18,3 +18,18 @@
         }
     }
 }
+
+@media only screen and (max-width: 1024px) {
+    .sobreNosotros {
+        padding: 1em;
+        .quienesSomos {
+            max-width: 90%;
+    
+            p {
+                font-size: 22px;
+                text-align: center;
+                padding: 2em;
+            }
+        }
+    }
+}

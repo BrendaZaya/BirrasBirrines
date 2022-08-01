@@ -6,14 +6,6 @@
     background-color: $colorSecundario;
     padding: 2vh;
 
-    // .titulo {
-    //     text-align: center;
-    //     font-size: 42px;
-    //     font-family: $fontPrincipal;
-    //     font-weight: 400;
-    //     padding: 2rem;
-    // }
-
     .contenedorProductos {
         width: 100%;
         display: grid;
@@ -370,4 +362,12 @@
     background-color: rgba(0, 0, 0, 0.3);
     // justify-content: right;
     // left: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+    .seccionProductos {
+        .contenedorProductos {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 }

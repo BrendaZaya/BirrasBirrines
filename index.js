@@ -6,6 +6,7 @@ const contenedorProductos = document.getElementById('contenedorProductos');
 const carritoContenedor = document.getElementById('carritoContenedor');
 
 const botonVaciar = document.getElementById('vaciarCarrito');
+const comprar = document.getElementById('comprar');
 
 const contadorCarrito = document.getElementById('contadorCarrito');
 
@@ -41,6 +42,18 @@ fetch("./data.json")
     // vaciar carrito
 
     botonVaciar.addEventListener('click', () => {
+        carrito.length = 0;
+        actualizarCarrito();
+    });
+
+    comprar.addEventListener('click', () => {
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Realizaste tu compra con exito',
+            showConfirmButton: false,
+            timer: 2000
+        })
         carrito.length = 0;
         actualizarCarrito();
     });
